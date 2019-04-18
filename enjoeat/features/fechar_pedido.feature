@@ -7,7 +7,7 @@ Funcionalidade: Finalizar pedido
     Esquema do Cenario: Finalizar pedido
         Dado que possuo itens no meu carrinho
             E eu já fechei o meu pedido
-            Quando eu finalizo meu pedido com "<pag>"
+            Quando eu finalizo meu Pedido com "<pag>"
             Então meu pedido é concluido com a mensagem:
             """
             Seu pedido foi recebido pelo restaurante. Prepare a mesa que a comida está chegando!
