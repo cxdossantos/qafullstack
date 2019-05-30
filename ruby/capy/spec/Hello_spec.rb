@@ -1,7 +1,7 @@
-describe 'Meu primeiro script' do
+describe 'Meu primeiro script', :hello do
 
     it 'visitar página' do
-        visit 'https://training-wheels-protocol.herokuapp.com/'
+        visit '/'
         expect(page.title).to eql 'Training Wheels Protocol'
     end
 end
