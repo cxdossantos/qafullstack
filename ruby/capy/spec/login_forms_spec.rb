@@ -34,11 +34,5 @@ describe 'Login Form', :smoke do
   
       expect(find('#flash')).to have_content 'O usuário informado não está cadastrado!'
 
-    end
-
-    after(:each) do |e|
-      nome =  e.description.gsub(/[^A-Za-z0-9 ]/, '').tr(' ', '_')
-      page.save_screenshot('log/' + nome + '.png')
-    end
-  
+    end  
   end
