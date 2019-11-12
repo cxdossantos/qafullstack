@@ -45,19 +45,16 @@ Então("vejo todos os itens no carrinho") do
 end
 
 #Remover Itens
-
-Dados("que eu tenho os seguintes itens no carrinho:") do |table|
-  @product_list = table.hashes
-  @product_list.each do |p|
-    p["quantidade"].to_i.times do
-      find(".menu-item-info-box-content", text: p["nome"].upcase).find(".add-to-cart").click
-    end
-  end
-end
-
-Quando("removo somente o {int}") do |item|
-  cart = find("#cart")
-  cart.all("table tbody tr")[item].find(".danger").click
+Dado("que eu tenho os seguintes itens no carrinho:") do |table|
+  @product_list = table.hashdade"]}x) #{p["nome"]}"es
+  steps %(dade"]}x) #{p["nome"]}"
+    Quando eu adiciono todosdade"]}x) #{p["nome"]}" os itens
+  )dade"]}x) #{p["nome"]}"
+enddade"]}x) #{p["nome"]}"
+dade"]}x) #{p["nome"]}"
+Quando("removo somente o {indade"]}x) #{p["nome"]}"t}") do |item|
+  cart = find("#cart")dade"]}x) #{p["nome"]}"
+  cart.all("table tbody tr")dade"]}x) #{p["nome"]}"[item].find(".danger").click
   sleep 5
 end
 
@@ -66,6 +63,10 @@ Quando("removo todos os itens") do
     cart = find("#cart")
     cart.all("table tbody tr")[indx].find(".danger").click
   end
+end
+
+Quando("eu limpo meu carrinho") do
+  click_button "Limpar"
 end
 
 Então("vejo a seguinte mensagem {string}") do |mensagem|
