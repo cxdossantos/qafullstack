@@ -1,7 +1,9 @@
-require 'capybara'
-require 'capybara/cucumber'
+require "capybara"
+require "capybara/cucumber"
+require "selenium-webdriver"
 
-Capybara.configure do |c|
-    c.default_driver = :selenium_chrome
-    c.default_max_wait_time = 10
+Capybara.configure do |config|
+  config.default_driver = :selenium_chrome
+  config.app_host = "https://enjoeat-sp3.herokuapp.com"
+  config.default_max_wait_time = 10
 end
