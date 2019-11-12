@@ -5,10 +5,11 @@ Funcionalidade: Cardápio
     Sendo um usuário que escolheu um restaurante
     Posso acesser o cardápio
 
+    Contexto: Restaurantes
+        Dado que acesso a lista de restaurantes
+
     @cardapio
     Cenario: Produto disponível
-
-        Dado que acesso a lista de restaurantes
         Quando eu escolho o restaurante "Burger House"
         Então vejo os seguintes itens disponíveis no cardápio:
             | produto        | descricao                       | preco    |
