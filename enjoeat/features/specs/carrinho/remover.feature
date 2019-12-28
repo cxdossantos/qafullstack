@@ -31,7 +31,6 @@ Funcionalidade: Remover do carrinho
         Quando removo todos os itens
         Então vejo a seguinte mensagem "Seu carrinho está vazio!"
     
-    
     Cenario: Limpar carrinho
         Quando eu limpo meu carrinho
         Então vejo a seguinte mensagem "Seu carrinho está vazio!"
