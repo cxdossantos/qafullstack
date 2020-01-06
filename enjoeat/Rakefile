@@ -1,0 +1,19 @@
+### RAKE : Programa instalado no Ruby para execuçãoe  gerenciamento de tarefas
+### comando terminal: rake 'task_name'
+require "time"
+
+task :hello do
+  puts "Hello Rake"
+end
+
+task :hello_name, [:name] do |task, args|
+  puts "Hello " + args[:name]
+end
+
+task :specs, [:tags, :browser] do |tags, args|
+  #   time = Time.now.strftime("%d/%m/%Y %H:%M:%S")
+  time = Time.now.strftime("%Y%m%dT%H%M")
+
+  report = "--format html --out=log/report_#{time}.html"
+  sh "cucumber #{args[:tags]} #{report} #{args[:browser]}"
+end
