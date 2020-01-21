@@ -16,4 +16,7 @@ task :specs, [:tags, :browser] do |tags, args|
 
   report = "--format html --out=log/report_#{time}.html"
   sh "cucumber #{args[:tags]} #{report} #{args[:browser]}"
+
+  # EXEMPLO DEEXECUÇÃO:
+  # rake specs["-t @smoke","-p chrome"]
 end
